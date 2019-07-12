@@ -1875,114 +1875,159 @@ h1.title {
 <section id="slide-orgc4f2f9d" data-markdown>
 	<textarea data-template>
 	### Qué es una blockchain?
-	Una red blockchain es registro público e inmutable de cambios de estado: comúnmente <b>transacciones</b>.
 
-	- Las **transacciones** se agrupan en bloques.
-	- Cada **bloque** contiene el **hash** del bloque anterior,
-	enlazándolos hasta el origen de la blockchain.
+	Es un sistema de almacenamiento de información anónimo, seguro y descentralizado.
 
   </textarea>
 </section>
 
 <section id="slide-orgc4f2f956" data-markdown>
 	<textarea data-template>
-		### Transacciones
-		Todas las transacciones son transparentes, permiten **proceso** y **auditoría públicos**.
-		- Cada transacción es firmada por una **private key**
-		del usuario que la realiza.
-		- Contienen:
-			+ Dirección de emisor
-			+ Dirección destino
-			+ Monto de criptomoneda implicada
-			+ Firma digital
-
+		Esta información está representada en forma de **transacciones**, 
+		y éstas son agrupadas en estructuras de datos llamadas
+		**bloques**
 	</textarea>
 </section>
 
-<section id="slide-org2400d16" data-markdown>
+<section id="slide-org2400d16">
+	<p>Se trata de una cadena de bloques enlazados por almacenar el número de identificación del bloque anterior</p>
+	<img src="img/blockchain_proof_of_work_example.png" width="500px;" />
+</section>
+
+
+<section id="slide-orgc4f2f956" data-markdown>
 	<textarea data-template>
-    ## Redes distribuidas
-    <br/>
-    - Formadass por **nodos**
-    - Libertad de alta/baja de nodos, al no haber un nodo central
-    - Una copia de toda la red en cada nodo
+	La magia radica en el modo en que la información es añadida y almacenada en la blockchain
+
+	* Descentralización
+	* Inmutabilidad de la historia
+	* Invulnerabilidad del sistema
+	* Persistencia de la información
+	* No hay un solo punto de falla
+	</textarea>
+</section>
+
+<section id="slide-org2400d16">
+	<h3>Cómo funciona?</h3>
+	<p>
+		Una red blockchain está estructurada en base a <b>nodos descentralizados</b> con <b>capacidad de procesamiento</b> y
+		almacenamiento
+	</p>
+	<p>
+		Los nodos generan y validan transacciones actualizando la red de manera concensuada
+	</p>
+	
+</section>
+
+<section id="slide-orgc4f2f9d" data-markdown>
+	<textarea data-template>
+	Cada nodo guarda una **replica** de todo el **historial de transacciones**
+  </textarea>
+</section>
+
+<section id="slide-orgc4f2f9d" data-markdown>
+	<textarea data-template>
+	1. Se genera una transacción entre usuarios de la red firmada digitalmente.
+	2. La transacción se propagada por la red para ser validada por los nodos para ser almacenada en un bloque.
+	3. Cuando un bloque está listo para ser agregado a la red, también debe validado por los nodos y para ello se utilizan **mecanismos de consenso**.
+  </textarea>
+</section>
+
+<section id="slide-orgc4f2f956" data-markdown>
+	<textarea data-template>
+		Existen distintos **mecanismos de consenso**, uno de ellos es el **Proof-of-Work** (prueba de trabajo), que consiste en
+		una serie de **operaciones** con **alto coste computacional** sobre un bloque para determinar su validez.
+	</textarea>
+</section>
+
+<section id="slide-orgc4f2f956" data-markdown>
+	<textarea data-template>
+
+		Este proceso de resolver el PoW se conoce como minería.
+		Cuando un bloque está disponible, los nodos comienzan a computar un algoritmo criptográfico para dar con el HASH del
+		bloque.
+		El primero minero que lo computa, avisa al resto, y si se consensa su validez, la red se actualiza con nuevos datos.
+	
+	</textarea>
+</section>
+
+<section id="slide-orgc4f2f956" data-markdown>
+	<textarea data-template>
+Así, la red blockchain funciona como una una base de datos completamente descentralizada que ningún nodo de la red
+podría manipular sin el consenso de la mayoría de los nodos.
+Esto garantiza la **integridad de la informacion**.
+	</textarea>
+</section>
+
+<section id="slide-org2400d16">
+	<img src="img/block1.jpg" width="650px;" />
+	<p>Red Centralizada vs Red descentralizada</p>
+</section>
+
+<section id="slide-org44eeffe26">
+	<h2>Cuándo usar blockchain?</h2>
+
+	<p>cuando deseo...</p>
+</section>
+
+<section id="slide-org44eeffe26">
+	<h2>Descentralización</h2>
+	<b>Estructura de nodos descentralizados con replica de la red blockchain</b>.
+	<p>Otorgar el control sobre los datos a la red y evitar punto único de fallo. No existe autoridad única.</p>
+</section>
+
+<section id="slide-org44eeffe26">
+		<h2>Inmutabilidad de los datos e invulnerabilildad del sistema</h2>
+		<p>La clave de su funcionamiento tiene que ver con la combinación de la criptografía de clave pública, los hashes
+			criptográficos y los mecanismos de consenso adoptados.</p>
+</section>
+
+<section id="slide-org44eeffe26">
+	<h4>Criptografía de clave pública</h4>
+	<p>
+		Se hace uso de una pareja de claves (pública y privada) para cifrar nuestras transacciones.
+	</p>
+	<b>Integridad y autenticidad de la información de las transacciones</b>
+</section>
+
+<section id="slide-org44eeffe26">
+	<h4>Hashing</h4>
+	<p>Aplica una función matemática de cifrado sobre un bloque, el resultado es el hash</p>
+	Este hash es agregado como parte de la información del siguiente bloque, y así son encadenados.
+</p>
+</section>
+
+<section id="slide-org44eeffe26">
+	<p>Así se evita que los bloques en el medio de la cadena sean falsificados. Cualquier cambio en su contenido cambiaría el
+	valor del hash calculado y por lo tanto no coincidiría con el valor existente en el siguiente elemento.
+	
+</section>
+
+<section id="slide-orgeeffe26">
+	<h2 id="orgeeffe26">Desarrollo basado en Blockchain</h2>
+</section>
+
+<section id="slide-orgee475e5" data-markdown>
+	<textarea data-template>
+	#### Blockchain como capa de persistencia
+	 - no tiene modelo de datos especificos 
+	 - almacena y ejecuta procedimientos (lógica) de manera descentralizada -> contratos inteligentes
+	 - la información se replicia en cada nodo
   </textarea>
 </section>
 
 <section id="slide-org8f168f7" data-markdown>
   <textarea data-template>
-    ## Bitcoin, la primer blockchain
-
-	La plataforma Bitcoin aplica la tecnología de bloques particularmente en un sistema de efectivo electrónico entre pares
-	que permite pagos de Bitcoin, un criptotoken propio, en línea.
-	
-	La red fue creada en 2009.
-    
+	## Bitcoin, la primer blockchain
+La plataforma Bitcoin aplica la tecnología de bloques en un sistema de efectivo electrónico entre pares
+basado en la moneda digital Bitcoin.
+La red fue creada en 2009.
   </textarea>
-
-</section>
-
-<section id="slide-orgee475ec" data-markdown>
-  <textarea data-template>
-    #### El viaje de una transacción
-    <span style="font-size:0.76em;">
-        - Construir la transaccion
-        - Nos conectamos a cualquier nodo de la blockchain
-        - El nodo recibe la transaccion y la almacena
-        - Luego la envia a los nodos mas cercanos
-        - Nuestra transacción va pasando por todos los nodos de la red
-        - Luego estara disponible en el nodo mas cerca al nodo del destinatario
-        - El destinatario vera que en su nodo mas cercano tiene una transaccion disponible
-        - La transaccion ha sido validad por todos esos nodos
-    </span>
-  </textarea>
-</section>
-
-<section id="slide-orgee475ec" data-markdown>
-  <textarea data-template>
-      ###### Pro
-      
-      - Con que haya un solo nodo arriba , seguiria funcionando al red
-      <br/>
-
-      ##### Contra
-      
-      - Poder gestionar todos los datos descentralizados
-      <br/>
-      
-      ##### Solucion
-
-      - ***Blockchain*** propone una solucion a todo esto.
-  </textarea>
-</section>
-
-<section id="slide-org44eeffe26">
-	<h2>Cuándo usar blockchain?</h2>
-</section>
-
-<section id="slide-org4641ec4" data-markdown>
-	<textarea data-template>
-
-	##### Inmutabilidad y evidencia
-	Controlar la posibilidad de cambio del estado de un conjunto de datos
-	#### Descentralización
-	Otorgar el control sobre los datos a la red
-	#### Transparencia
-	Datos sean visibles para que todos establezcan su confianza
-
-	</textarea>
 </section>
 
 <section id="slide-orgeeffe26">
-	<h2 id="orgeeffe26">Desarrollo basado en Blockchain</h2>
-	<p>
-	DApps en la red Ethereum
-	</p>
+	<h2 id="orgeeffe26">DApps en la red Ethereum</h2>
 </section>
-
-<!-- <section id="slide-orgee475e5" data-markdown></section>
-<img src="img/ETHEREUM.png">
-</section> -->
 
 <section id="slide-orgee475e5" data-markdown>
 	<textarea data-template>
@@ -1997,25 +2042,12 @@ h1.title {
 	<textarea data-template>
 
 	- Permite crear e implementar **DApps**
-
-	- La plataforma se enfoca en ejecutar el código de programación de cualquier aplicación descentralizada.
-	- Hay un Ethereum Virtual Machine (EVM) corriendo en cada nodo de Ethereum compilando DApps.
+	- Tiene una criptomoneda propia: el Ether
+	- Permite crear otras criptomonedas
+	- La plataforma se enfoca en ejecutar el código de programación de cualquier aplicación descentralizada
+	- Hay un Ethereum Virtual Machine (EVM) corriendo en cada nodo de Ethereum compilando DApps
 
 	</textarea>
-</section>
-
-<section id="slide-org4641ec5">
-	<h2>Ether</h2>
-	<ul>
-		<li>Criptotoken propio que alimenta la red:
-			<ul>
-				<li>es una moneda electrónica</li>
-				<li>también es usado por desarrolladores de aplicaciones para pagar tarifas de transacción y servicios en la red de
-					Ethereum (gas) </li>
-			</ul>
-		</li>
-	</ul>
-
 </section>
 
 <section id="slide-org4641ecd">
@@ -2052,24 +2084,6 @@ h1.title {
 </textarea>
 </section>
 
-<section id="slide-org1e69ff76" data-markdown>
-	<textarea data-template>
-		Cada usuario de la DApp almacena un historial completo de las acciones que se realizan en la red DApp, y a su vez, las
-		interacciones son almacenadas en la blockchain dentro de los bloques de la misma. Para ello se utilizan técnicas
-		criptográficas que garantizan accesos seguros.
-	</textarea>
-</section>
-
-<section id="slide-org1e69ff766" data-markdown>
-	<textarea data-template>
-
-		- al trabajar y ejecutarse sobre una blockchain, gozan de sus capacidades de seguridad, privacidad e incluso anonimato
-		- garantizan también que la data usada por la DApp sólo es accesible por la persona que originó dicha información
-		- pueden guardar valor, no pueden ser borradas y sus datos son públicos
-
-	</textarea>
-</section>
-
 <section id="slide-orgbd58737">
 	<h2 id="orgbd58737">Development tools</h2>
 </section>
@@ -2102,51 +2116,63 @@ h1.title {
 <section id="slide-org1e69ff7r66" data-markdown>
 	<textarea data-template>
 		## Demo
-		1. #### Instalamos ambiente de desarrollo de smart contracts con Ethereum
-		2. #### Desarrollamos una dapp simple con VueJs que necesite almacenar datos, usando Truffle para conectarnos a la blockchain.
-		3. #### Escribimos un smart contract que garantice la lógica de negocio de la dapp
-		4. #### Levantamos red privada blockchain con Ganache
-		5. ### Deployamos el contrato en la red que simula Ganache
+		1. Instalamos ambiente de desarrollo de smart contracts con Ethereum
+		2. Desarrollamos una dapp simple con VueJs que necesite almacenar datos, usando Truffle para conectarnos a la blockchain.
 
 	</textarea>
 </section>
 
 <section id="slide-org1e69ff7r66" data-markdown>
 	<textarea data-template>
-		## Estructura de la dapp
-		- Contratos
-		- Migraciones (deploy)
+	
+		3. Escribimos un smart contract que garantice la lógica de negocio de la dapp
+		4. Levantamos red privada blockchain con Ganache
+		5. Deployamos el contrato en la red que simula Ganache
 
 	</textarea>
 </section>
 
-<section id="slide-orgb4f4b28">
-<h2 id="orgb4f4b28">xx</h2>
+
+<section id="slide-orgee475ec" data-markdown>
+	<textarea data-template>
+      ### Blockchain - El Futuro
+  </textarea>
 </section>
+
+<section id="slide-org2400d16">
+	<img src="img/sanidad.png" width="850px;" />
+	<p>Sanidad</p>
 </section>
-<section>
-<section id="slide-org73da104">
-<h2 id="org73da104">xxx</h2>
+
+<section id="slide-org2400d16">
+	<img src="img/iot.jpg" width="750px;" />
+	<p>Internet de las Cosas</p>
 </section>
+
+<section id="slide-org2400d16">
+	<img src="img/pasaje.png" width="250px;" />
+	<p>Bienes digitales</p>
 </section>
-<section>
-<section id="slide-org9c0b777">
-<h2 id="org9c0b777">xx</h2>
+
+<section id="slide-orgee475ec" data-markdown>
+	<textarea data-template>
+	## Blockchain para video juegos
+
+	Datos inmutables, registos históricos y monedas digitales, ofrecen una experiencia descentralizada de juego.
+  </textarea>
 </section>
+
+<section id="slide-orgee475ec" data-markdown>
+	<textarea data-template>
+	## Categorías de videojuegos basados en blockchain
+
+	* como una recompensa para el juego
+	* como una herramienta promocional artificiosa
+	* o como un verdadero modificador del juego
+
+  </textarea>
 </section>
-<section>
-<section id="slide-orga178db5">
-<h2 id="orga178db5">Conclusión</h2>
-</section>
-</section>
-<section>
-<section id="slide-org01ebbea">
-<h2 id="org01ebbea">xxxx</h2>
-<p>
-neto@camba.coop
-</p>
-</section>
-</section>
+
 </div>
 </div>
 <script>
