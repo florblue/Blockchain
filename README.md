@@ -1,6 +1,10 @@
-# Blockchain
 
 # Blockchain
+
+Si querés ver una presentación sobre Blockchain:
+
+- git clone del proyecto
+- abrir archivo blockchain.html en un navegador
 
 Es un sistema de almacenamiento de información seguro y descentralizado.
 
